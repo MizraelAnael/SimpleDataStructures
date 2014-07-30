@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleDataStructures", "SimpleDataStructures\SimpleDataStructures.vcxproj", "{D1571D8C-800E-446C-A3E2-21872B07026A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestSimpleDataStructures", "TestSimpleDataStructures\TestSimpleDataStructures.vcxproj", "{984A176C-F8FB-4A7E-AFCA-2B3F4B5F9E57}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D1571D8C-800E-446C-A3E2-21872B07026A} = {D1571D8C-800E-446C-A3E2-21872B07026A}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{28D9EBF8-CC1C-42BE-9FC4-D51931E5ED64}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		SimpleDataStructures.vsmdi = SimpleDataStructures.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = SimpleDataStructures.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1571D8C-800E-446C-A3E2-21872B07026A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D1571D8C-800E-446C-A3E2-21872B07026A}.Debug|Win32.Build.0 = Debug|Win32
+		{D1571D8C-800E-446C-A3E2-21872B07026A}.Release|Win32.ActiveCfg = Release|Win32
+		{D1571D8C-800E-446C-A3E2-21872B07026A}.Release|Win32.Build.0 = Release|Win32
+		{984A176C-F8FB-4A7E-AFCA-2B3F4B5F9E57}.Debug|Win32.ActiveCfg = Debug|Win32
+		{984A176C-F8FB-4A7E-AFCA-2B3F4B5F9E57}.Debug|Win32.Build.0 = Debug|Win32
+		{984A176C-F8FB-4A7E-AFCA-2B3F4B5F9E57}.Release|Win32.ActiveCfg = Release|Win32
+		{984A176C-F8FB-4A7E-AFCA-2B3F4B5F9E57}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
