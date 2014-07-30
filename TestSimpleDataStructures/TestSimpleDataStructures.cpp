@@ -290,5 +290,56 @@ namespace TestSimpleDataStructures
 			Line2.pop();
 			Assert::AreEqual (13, Line2.top());
 		}
+
+		[TestMethod]
+		void AssignStackToEmptyStack()
+		{
+			StackOfElement Stack1;
+			Stack1.push (20);
+			Stack1.push (2);
+			Stack1.push (3);
+			StackOfElement Stack2 = Stack1;			
+			Assert::AreEqual (3, Stack2.size());
+			Assert::AreEqual (3, Stack2.top());
+			Stack2.pop();
+			Assert::AreEqual (2, Stack2.top());
+			Stack2.pop();
+			Assert::AreEqual (20, Stack2.top());
+		}
+
+		[TestMethod]
+		void AssignStackToNotEmptyStack()
+		{
+			StackOfElement Stack1;
+			Stack1.push (20);
+			Stack1.push (2);
+			Stack1.push (3);
+			StackOfElement Stack2;
+			Stack2.push (6);
+			Stack2.push (10);
+			Stack2 = Stack1;
+			Assert::AreEqual (3, Stack2.size());
+			Assert::AreEqual (3, Stack2.top());
+			Stack2.pop();
+			Assert::AreEqual (2, Stack2.top());
+			Stack2.pop();
+			Assert::AreEqual (20, Stack2.top());
+		}
+
+		[TestMethod]
+		void CopyStackInNewStack()
+		{
+			StackOfElement Stack1;
+			Stack1.push (20);
+			Stack1.push (2);
+			Stack1.push (3);
+			StackOfElement Stack2 (Stack1);
+			Assert::AreEqual (3, Stack2.size());
+			Assert::AreEqual (3, Stack2.top());
+			Stack2.pop();
+			Assert::AreEqual (2, Stack2.top());
+			Stack2.pop();
+			Assert::AreEqual (20, Stack2.top());
+		}
 	};
 }

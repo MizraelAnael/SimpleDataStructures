@@ -7,6 +7,8 @@ class StackOfElement
 public:
 	StackOfElement();
 	~StackOfElement();
+	StackOfElement (const StackOfElement& rhs);
+	StackOfElement& operator= (const StackOfElement& rhs);
 	void clear();	
 	bool isEmpty();
 	int size();
@@ -21,5 +23,6 @@ private:
 		node (int i, node* n = NULL);
 	};
 	node* head;
+	void copy(const StackOfElement& rhs);
 };
 

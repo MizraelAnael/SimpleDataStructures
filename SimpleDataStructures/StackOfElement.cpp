@@ -63,3 +63,33 @@ StackOfElement::node::node (int i, node* n)
 	value = i;
 	next = n;
 }
+
+void StackOfElement::copy (const StackOfElement& rhs)
+{
+	StackOfElement rhs1;
+	node* current = rhs.head;
+	while (current)
+	{
+		rhs1.push (current->value);
+		current = current->next;
+	}
+	current = rhs1.head;
+	while (current)
+	{
+		this->push (current->value);
+		current = current->next;
+	}
+}
+
+
+StackOfElement::StackOfElement (const StackOfElement& rhs) : head (NULL)
+{
+	copy(rhs);
+}
+
+StackOfElement& StackOfElement::operator= (const StackOfElement& rhs)
+{
+	clear();
+	copy(rhs);
+	return *this;
+}
